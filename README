@@ -1,0 +1,30 @@
+Tom Smith
+Project 1
+2D Game Design
+Zip file: TSmith1.ZIP
+Project directory: TSmith1
+
+This program was written using python 2.7.5 on Mac OS 10.9.4.
+It can be run from the terminal in the project folder by running "kivy ./main.py"
+
+--------------------------------------------------------------------------------
+
+The program creates a main widget from the MovementGame Class. As children of this widget two more widgets are created,
+a player widget from the Player class and a pickup item from the PickUp Class.
+
+When a touch event is detected the player object's direction of travel is calculated using the location of the player
+and the touch event. The difference between these to locations is calculated, used to create a vector and then that vector
+is normalized to and multiplied by 2.5 to give a constant speed.
+
+When a collision is detected between the player and widget pickup item the pickup item is removed from the screen.
+
+The player object moves until its lower left vertex has reached a particular distance from the touch event.
+
+--------------------------------------------------------------------------------
+
+I used code from the PongGame tutorial found on the Kivy homepage. I have labeled the classes and any sources I used within
+the programs comments in more detail.
+
+Player Class, was taken from the PongBall Class in the tutorial.
+MovementApp class was taken from the App class in the Pong tutorial.
+MovementGame was derived from the PongGame class in the pong tutorial but has been modified from my purposes.

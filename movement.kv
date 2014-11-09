@@ -1,0 +1,49 @@
+#:kivy 1.0.7
+
+
+<Player>:
+    size: 50, 100
+    size_hint: None, None
+    canvas:
+        Rectangle:
+            source: "rocket_color.png"
+            #This image was found on pixabay.com and is under the Creative Commons Deed CC0
+            #This image has also been edited in size and color
+            pos: self.pos
+            size: self.size
+
+<PickUp>:
+    size: 30, 30
+    size_hint: None, None
+    canvas:
+        Ellipse:
+            size: self.size
+            pos: self.pos
+            #This image was found on pixabay.com and is under the Creative Commons Deed CC0
+            #This image has also been edited in size
+            source: "item.png"
+
+
+<MovementGame>:
+
+    player: player_image
+    item: pickup
+    item2: pickup2
+
+#    PickUp:
+#        id: test
+#        center: self.parent.width - 20, self.parent.height / 2
+
+    PickUp:
+        id: pickup
+        center: self.parent.width / 4, self.parent.height / 4
+
+
+    PickUp:
+        id: pickup2
+        center: self.parent.width / 2, self.parent.height - 40
+
+    Player:
+        id: player_image
+        center: self.parent.center
+
